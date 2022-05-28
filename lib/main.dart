@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-
+import './home/main_food_page.dart';
 void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
@@ -13,6 +13,11 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: const MainFoodPage(),
+      ),
+    );
   }
 }
