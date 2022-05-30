@@ -1,5 +1,7 @@
+import 'package:delicious/home/food_page_body.dart';
 import 'package:delicious/utils/colors.dart';
 import 'package:delicious/widgets/big_text.dart';
+import 'package:delicious/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
 class MainFoodPage extends StatefulWidget {
@@ -22,9 +24,14 @@ class _MainFoodPageState extends State<MainFoodPage> {
              mainAxisAlignment: MainAxisAlignment.spaceBetween,
              children: [
                Column(
-                 children: const [
-                   BigText(text: 'Bangladesh', color: AppColors.mainColor),
-                   Text('City')
+                 children: [
+                   const BigText(text: 'Bangladesh', color: AppColors.mainColor),
+                   Row(
+                     children: const [
+                        SmallText(text: 'NarsingDi', color: Colors.black54),
+                        Icon(Icons.arrow_drop_down_rounded)
+                     ]
+                   )
                  ],
                ),
                Center(
@@ -40,7 +47,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
                )
              ],
            ),
-         )
+         ),
+         const FoodPageBody()
         ],
       ),
     );
